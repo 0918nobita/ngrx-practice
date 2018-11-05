@@ -13,8 +13,7 @@
   },
   "lint-staged": {
     "*.ts": [
-      "prettier-tslint --write",
-      "eslint",
+      "tslint",
       "git add"
     ]
   },
@@ -55,6 +54,8 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "tslint-config-standard": "^8.0.1",
     "tslint-plugin-prettier": "^2.0.1",
     "typescript": "~3.1.1"
   }
