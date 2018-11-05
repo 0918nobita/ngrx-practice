@@ -11,6 +11,13 @@
     "format": "prettier ./src/**/*.ts ./src/**/*.scss --write",
     "precommit": "lint-staged"
   },
+  "lint-staged": {
+    "*.ts": [
+      "prettier-tslint --write",
+      "eslint",
+      "git add"
+    ]
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~7.0.0",
