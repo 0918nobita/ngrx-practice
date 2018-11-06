@@ -9,6 +9,7 @@ import * as fromCounter from './state';
   imports: [
     CommonModule,
     StoreModule.forRoot({}),
+    // アプリ全体に counter という名前でストアを登録する
     StoreModule.forFeature('counter', fromCounter.reducers, {
       metaReducers: fromCounter.metaReducers
     })
