@@ -1,8 +1,8 @@
-import { NgModule } from "@angular/core";
-import { Routes, RouterModule } from "@angular/router";
-import { CounterComponent } from "./counter/counter.component";
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { CounterComponent } from './counter/counter.component';
 
-const routes: Routes = [{ path: "", component: CounterComponent }];
+const routes: Routes = [{ path: '', component: CounterComponent }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
