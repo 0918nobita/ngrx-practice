@@ -8,6 +8,7 @@ import * as fromCounter from './state';
   declarations: [CounterComponent],
   imports: [
     CommonModule,
+    StoreModule.forRoot({}),
     StoreModule.forFeature('counter', fromCounter.reducers, {
       metaReducers: fromCounter.metaReducers
     })
