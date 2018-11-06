@@ -11,6 +11,8 @@ export interface State {
   counter: fromCounter.State;
 }
 
+// Store の実態
+// Reducer を追加した時には、ここに追加されていく
 export const reducers: ActionReducerMap<State> = {
   counter: fromCounter.reducer
 };
