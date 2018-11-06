@@ -8,14 +8,18 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "format": "prettier ./src/**/*.ts ./src/**/*.scss --write",
-    "precommit": "lint-staged"
+    "format": "prettier ./src/**/*.ts ./src/**/*.scss --write"
   },
   "lint-staged": {
     "*.ts": [
       "tslint --project ./ --fix",
       "git add"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "private": true,
   "dependencies": {
