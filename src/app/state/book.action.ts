@@ -1,3 +1,5 @@
+import { Action } from '@ngrx/store';
+
 /*
   本に関するアクション
   (*) ISBN で本を検索する
@@ -15,3 +17,38 @@ export enum BookActionTypes {
   SearchBySkillSuccess = '[Book] Succeed in searching by skill',
   SearchBySkillFailed = '[Book] Fail in searching by skill'
 }
+
+class SearchByIsbnAction implements Action {
+  readonly type = BookActionTypes.SearchByIsbnAction;
+  constructor(private payload: { isbn: string; length: 10 | 13 }) {}
+}
+
+class SearchByIsbnSuccess implements Action {
+  readonly type = BookActionTypes.SearchByIsbnSuccess;
+}
+
+class SearchByIsbnFailed implements Action {
+  readonly type = BookActionTypes.SearchByIsbnFailed;
+  constructor(private payload: {}) {}
+}
+
+class SearchBySkillAction implements Action {
+  readonly type = BookActionTypes.SearchBySkillAction;
+  constructor(private payload: { skillID: string }) {}
+}
+
+class SearchBySkillSuccess implements Action {
+  readonly type = BookActionTypes.SearchBySkillSuccess;
+}
+
+class SearchBySkillFailed implements Action {
+  readonly type = BookActionTypes.SearchBySkillFailed;
+}
+
+type BookActions =
+  | SearchByIsbnAction
+  | SearchByIsbnSuccess
+  | SearchByIsbnFailed
+  | SearchBySkillAction
+  | SearchBySkillSuccess
+  | SearchBySkillFailed;
